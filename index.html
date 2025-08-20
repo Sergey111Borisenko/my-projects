@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sergey</title>
+        <link rel="icon" href="Sergecoin_Logo128x128_rounded.png" type="image/png">
+    </head>
+    <body>
+        <div style="width:100%; height:auto; display:flex; justify-content:center;">
+            <div id="grid" style="display:grid; grid-template-columns: auto 5vw auto; margin-top:4%; margin-right: 22%;">
+                <div style="display: flex; flex-direction: column; align-items:center; ">
+                    <p class="text" style="margin-bottom:1.5%;">Sergey Borisenko</p>
+                    <img class="image" src="Sergey_photo.jpg" alt="Sergey photo" style="height:397px; width:265px;">
+                    <p class="text" style="margin-top:1.5%; font-style: italic;">"Always move forward."</p>
+                </div>
+                <div style="grid-column: 3; margin-top: 30%">
+                    <h1 class="title1">My projects:</h1>
+                    <div style="display:flex; flex-direction: row; align-items: center; justify-content: center; margin-top:5%;">
+                        <p class="text"><a href="sergecoin.html">- Sergecoin</a></p>
+                        <a href="sergecoin.html" style="margin-left:4%;">
+                        <img class="image" src="Sergecoin_Logo128x128_rounded.png" alt="Sergecoin Logo" style="height: 32px; width: 32px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div style="position: absolute; left: 0; bottom: 0; width: 100%; padding-top: 4%; display:flex; justify-content:center; border-top:1px #525252 solid; margin-top: 2%;">
+                <p class="text2" style="margin-bottom: 1%;">© 2025 Serge. All Rights Reserved.</p>
+            </div>
+        </div>
+        <script>
+            // adaptation to smartphone screen format
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+
+            if (w / h < 1) {
+                const texts = document.getElementsByClassName("text");
+                const titles = document.getElementsByClassName("title1");
+                const titles2 = document.getElementsByClassName("title2");
+                const sergecoin = document.getElementsByClassName("sergecoin");
+                const indicators = document.getElementsByClassName("indicators");
+                const images = document.getElementsByClassName("image");
+                const grid = document.getElementById("grid");
+                for (let i = 0; i < texts.length; i = i + 1) {
+                    texts.item(i).style.fontSize = "2em";
+                }
+                for (let i = 0; i < titles.length; i = i + 1) {
+                    titles.item(i).style.fontSize = "3.5em";
+                }
+                for (let i = 0; i < titles2.length; i = i + 1) {
+                    titles2.item(i).style.fontSize = "3em";
+                }
+                for (let i = 0; i < sergecoin.length; i = i + 1) {
+                    sergecoin.item(i).style.fontSize = "5em";
+                }
+                for (let i = 0; i < indicators.length; i = i + 1) {
+                    indicators.item(i).style.fontSize = "2em";
+                }
+                for (let i = 0; i < images.length; i = i + 1) {
+                    images.item(i).style.height = String(parseInt(images.item(i).style.height) * 1.5) + "px";
+                    images.item(i).style.width = String(parseInt(images.item(i).style.width) * 1.5) + "px";
+                }
+                grid.style.marginTop = "50%";
+                grid.style.marginRight = "0%";
+            }
+        </script>
+    </body>
+    <style>
+        body {
+            background-color: #AFDBF5;
+            margin: 0;
+        }
+        a {
+            color: #e63946;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #457b9d;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #6c757d;
+        }
+
+        .indicators {
+            font-family:verdana;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .text {
+            font-family:verdana;
+            font-size: 1em;
+            line-height: 1.5;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            margin: 0;
+        }
+        .text2 {
+            font-family:verdana;
+            font-size: 1em;
+            line-height: 1.5;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            margin: 0;
+        }
+        .sergecoin {
+            font-family:verdana;
+            font-size: 3em;
+            margin: 0;
+        }
+        .title1 {
+            font-family:verdana;
+            font-size: 2em;
+            margin: 0;
+        }
+        .title2 {
+            font-family:verdana;
+            font-size: 1em;
+            margin: 0;
+        }
+        .image {
+            margin: 0;
+        }
+    </style>
+</html>
